@@ -1,0 +1,96 @@
+1. How did viewing a diff between two versions of a file help you see the bug that was introduced?
+It was very clear by showing the areas where changes were made, instead of having
+to scan the document manually.
+
+2. How could having easy access to the entire history of a file make you a more 
+efficient programmer in the long term?
+I can quickly refer to the version history to find various change made, reflect 
+on my thought process, and see a running history of my design patterns over time.
+
+Note: Concept Maps. Lookup ways to use to organize thoughts, plan learning.
+
+Commands: 
+git log - complete history of commits. includes id number, messages, 
+git diff - Compare version of commits.  Use id numbers of versions. Supports 
+colorized diff ($ git config --global color.ui auto). Black - no changes. Red - lines removed, Green - Added
+git dif --stat - overview states of how many changes
+
+> How Often to Commit? - A good rule of thumb is to make one commit per logical 
+change. For example, if you fixed a typo, then fixed a bug in a separate part of
+ the file, you should use one commit for each change since they are logically 
+ separate.
+ 
+ note: Judgment Call
+Choosing when to commit is a judgment call, and it's not always cut-and-dried. 
+When choosing whether to commit, just keep in mind that each commit should have 
+one clear, logical purpose, and you should never do too much work without 
+committing.
+
+3. What do you think are the pros and cons of manually choosing when to create a 
+commit, like you do in Git, vs having versions automatically saved, like Google 
+Docs does?
+
+Pro: More control. Versions should be at the current running state at the time 
+of the commit.
+
+Cons: Forgetting when to commit. Having too many changes present when you do 
+remember to commit.
+
+4. Why do you think some version control systems, like Git, allow saving 
+multiple files in one commit, while others, like Google Docs, treat each file 
+separately?
+
+Multiple file systems are designed with inter-related files in mind. While 
+others like Gdocs deal primarily with static documents that are not inter-
+related.
+
+Cloning a Repository (entire history)
+> git clone <url>
+
+5. How can you use the commands git log and git diff to view the history of 
+files?
+
+I can use git log to find the id values for specific commits and their messages.
+I can use git log --stat to see overall information on how many total changes 
+were made for a commit. insertions, deletions, etc... and I can use git diff to 
+see the actual changes that were made.
+
+---
+Git Errors and Warnings Solution
+
+Should not be doing an octopus
+Octopus is a strategy Git uses to combine many different versions of code 
+together. This message can appear if you try to use this strategy in an 
+inappropriate situation.
+
+You are in 'detached HEAD' state
+HEAD is what Git calls the commit you are currently on. You can “detach” the 
+HEAD by switching to a previous commit, which we’ll see in the next video. 
+Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. 
+Git just warns you so that you’ll realize you’re doing it.
+
+Panic! (the 'impossible' happened)
+This is a real error message, but it’s not output by Git. Instead it’s output by 
+GHC, the compiler for a programming language called Haskell. It’s reserved for 
+particularly surprising errors!
+
+Takeaway We hope these errors and warnings amused you as much as they amused us! 
+Now that you know what kind of errors Git can throw, you’re ready to start 
+checking out previous versions of files with Carolin
+
+----
+6. How might using version control make you more confident to make changes that 
+could break something?
+
+- I can always go back to a previous version and revert to the working code, so 
+I am protected from screwing things up too badly.
+----
+
+* next to commit id in terminal means changes not committed yet.
+
+--
+7. Now that you have your workspace set up, what do you want to try using Git 
+for?
+
+My personal web deveelopment projects. Keeping different versions available. 
+Backing up code, and reviewing differences.
