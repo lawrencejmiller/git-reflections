@@ -1,0 +1,21 @@
+1. What happens when you initialize a repository? Why do you need to do it?
+
+It creates a folder called .git and creates the repository. 
+
+***
+git add <filename> : Add to staging area
+git reset <filename>: Removes from staging area but keeps in working directory.
+***
+
+2. How is the staging area different from the working directory and the 
+repository? What value do you think it offers?
+
+The staging area is the holding area for file that are to be committed  on the 
+next commit, while the working directory is the main location for all project 
+files. The staging area allows the user to be selective about which changes are
+part of any particular commit.
+
+***
+Specify a commit message on the command line: git commit -m "Commit message"
+
+>>> Commit Style Guide: http://udacity.github.io/git-styleguide/
