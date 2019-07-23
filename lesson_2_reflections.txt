@@ -19,3 +19,112 @@ part of any particular commit.
 Specify a commit message on the command line: git commit -m "Commit message"
 
 >>> Commit Style Guide: http://udacity.github.io/git-styleguide/
+
+Message Structure
+
+> type: subject
+
+> body
+
+> footer
+---
+
+The Type
+
+The type is contained within the title and can be one of these types:
+
+    feat: a new feature
+    fix: a bug fix
+    docs: changes to documentation
+    style: formatting, missing semi colons, etc; no code change
+    refactor: refactoring production code
+    test: adding tests, refactoring test; no production code change
+    chore: updating build tasks, package manager configs, etc; no production code change
+***
+> git diff | Compare working directory with staging area
+> git diff --staging | Compare staging area	with latest commit
+> git reset --hard | Discards any changes in working directory or staging area.
+>> NOTE: THIS CANNOT BE UNDONE!!!
+
+---
+
+3. How can you use the staging area to make sure you have one commit per logical 
+change?
+
+Add only the files that are changed per logical change to the stagin area before
+eaach commit. Continue adding files for each logical change until all changes 
+are committed.
+
+***
+> git branch | show all branches
+> git branch <label> | create new branch with name of <label>
+note: branch with "*" is the currently checked out version
+> git checkout <branch label> | switch to branch
+
+----
+4. What are some situations when branches would be helpful in keeping your 
+history organized? How would branches help?
+
+When testing out new styles or features and I do not want to mess up the current
+version I have.
+- Master branch - ALWAYS WORKS PRODUCTION BRANCH
+- Experimental
+- Switch context
+- New branch for each feature
+- New branch for each collaborator
+
+* remote branch - someone else created it.
+---
+4. How do the diagrams help you visualize the branch structure?
+
+It shows how some commits can be unreachable because they are not part of any 
+defined branch.  Branch are linked lists.
+***
+> git show <commit id> | Compare changes of commit to parent, without knowing
+parent.
+
+> git branch -d <branch label> | delete branch label.  Used once merge complete
+to avoid unreachable commits.
+
+Merge conflict
+
+If you get a message like this
+
+Auto-merging game.js
+CONFLICT (content): Merge conflict in game.js
+Automatic merge failed; fix conflicts and then commit the result.
+
+then your files were not in the same state as Caroline's when you started the 
+merge. To fix this, complete the following steps:
+
+1. Restore your files to their state before you started the merge by running git 
+merge --abort
+
+2. Double check the state of your files. If you run git log while the master 
+branch is checked out, you should see Caroline's "Add color" commit as the 
+second-most-recent, and the most recent should be your commit fixing the bullet 
+bug. If you use git diff to compare your commit to Caroline's, your commit 
+should introduce the line this.delayBeforeBullet = 10; on line 424. The line 
+should be indented to the same level as the line below it using only spaces 
+(no tabs), and the line should have no spaces after it.
+
+3. Once your file is in the correct state, create a new commit with your changes.
+
+4. Try the merge again.
+
+---
+5. What is the result of merging two branches together? Why do we represent it 
+in the diagram the way we do?
+
+All changes are merged into a single branch. The logs are then also merged and 
+sorted in timestamp order. It's represented in the diagram to show where the two 
+heads merge into the one branch.
+----
+6. What are the pros and cons of Git’s automatic merging vs. always doing merges 
+manually?
+
+Pros: Automatic merging makes it much easier to continue working when relatively 
+straightforward changes are implemented.
+
+Cons: Not exactly sure "what" changes were made and how they might affect you 
+later.  Manual merging is more tedious but gives you more control.
