@@ -25,3 +25,10 @@ machine. Done using the git clone command.
 commits are following along the label provided to the branch. They are 
 tangential breaks from commit histories where new paths are created for various
 reasons.
+
+***
+4. What is the benefit of having a copy of the last known state of the remote 
+stored locally?
+
+You have access to the latest oublished version of the code available for any 
+current work you are doing.
