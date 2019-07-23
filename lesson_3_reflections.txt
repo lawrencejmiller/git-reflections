@@ -10,3 +10,18 @@ automatically stay up-to-date with your remote repository?
 
 Changes introduced by automatically syncing may affect something I am currently 
 working on.
+***
+
+3. Describe the differences between forks, clones, and branches. When would you 
+use one instead of another?
+
+- Forks are clones that are created solely on GitHub and link back to the original
+creator of the repo.
+
+- Clones are copies of any repo (remote or local) that reside on the users local 
+machine. Done using the git clone command.
+
+- Branches are separate paths along the git log where changes are made, but the	
+commits are following along the label provided to the branch. They are 
+tangential breaks from commit histories where new paths are created for various
+reasons.
