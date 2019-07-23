@@ -32,3 +32,10 @@ stored locally?
 
 You have access to the latest oublished version of the code available for any 
 current work you are doing.
+***
+
+5. How would you collaborate without using Git or GitHub? What would be easier, 
+and what would be harder?
+
+Probably through an endless series of emails, chat sessions, and note boards or 
+a Slack channel.
